@@ -1,0 +1,117 @@
+@use 'variables' as vars;
+@use 'mixins' as m;
+
+// Utilidades de flexbox
+.flex { @include m.flex(); }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-center { justify-content: center; align-items: center; }
+.flex-space-between { justify-content: space-between; align-items: center; }
+
+// Estilo de sección tipo "tarjeta"
+.section {
+  padding: 1rem;
+  border: 1px solid vars.$border-color;
+  background-color: vars.$color-bg;
+  margin-bottom: 1rem;
+  @include m.flex(column, 0.5rem);
+}
+
+// Encabezado superior (nombre)
+.header {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-bottom: 1px solid vars.$border-color;
+  background-color: #eee;
+}
+
+// Sección "About Me"
+.about {
+  h1, h3 { text-align: center; }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+// Enlaces de navegación (centrados)
+.links {
+  text-align: center;
+
+  nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+
+    span {
+      color: vars.$color-text;
+    }
+  }
+}
+
+// Pie de página
+.footer {
+  border: 2px solid vars.$border-color;
+  padding: 1rem;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  a {
+    font-weight: 500;
+    border-bottom: 1px solid vars.$border-color;
+    color: vars.$color-text;
+
+    &:hover {
+      background-color: vars.$link-hover-bg;
+      color: vars.$link-hover-color;
+    }
+  }
+}
+
+// Sección extendida del about
+.about-section {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+// Ajustes responsive para móviles
+@media (max-width: 600px) {
+  .links nav {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

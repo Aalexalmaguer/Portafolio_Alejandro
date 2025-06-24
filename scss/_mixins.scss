@@ -1,0 +1,8 @@
+// Mixin para generar cajas flexibles con diferentes direcciones y alineaciones
+@mixin flex($dir: row, $gap: 1rem, $jc: flex-start, $ai: stretch) {
+  display: flex;
+  flex-direction: $dir;
+  gap: $gap;
+  justify-content: $jc;
+  align-items: $ai;
+}

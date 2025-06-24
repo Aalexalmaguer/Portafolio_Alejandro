@@ -1,0 +1,33 @@
+@use 'variables' as vars;
+
+// Estilo general para h1, h2, h3
+h1, h2, h3 {
+  font-weight: 600;
+  color: vars.$color-text;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+// Título principal (página)
+h1 {
+  font-size: 2.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid vars.$border-color;
+  margin-bottom: 1.5rem;
+}
+
+// Título secundario (sección)
+h2 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid vars.$border-color;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+// Subtítulo pequeño
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
