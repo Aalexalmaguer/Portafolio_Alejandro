@@ -106,19 +106,13 @@ h3 {
   color: #000 !important;
 }
 
-/* Hero section con fondo */
+/* Hero section: Fondo limpio sin imagen */
 .hero {
-  background: url('/images/hero-bg.jpg') center/cover no-repeat;
-  color: #fff;
+  background-color: var(--color-bg); /* Usa el fondo blanco definido en tus variables */
+  color: var(--color-text);          /* Usa el texto negro definido en tus variables */
   padding: 4rem 1rem;
   text-align: center;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.hero p.lead {
-  font-size: 1.25rem;
+  /* Eliminamos la línea de background: url(...) */
 }
 
 /* Cards para secciones */
